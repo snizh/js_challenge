@@ -7,6 +7,7 @@
 * Знание React JS.
 * Хорошее понимание html/css, опыт создания single page applications.
 * Работа в команде, Git, TDD.
+* Работа удалённо.
 
 Будет плюсом:
 * Serverside JS, docker, AWS
