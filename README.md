@@ -1,6 +1,6 @@
 # JavaScript challenge 1
 
-Ищу себе в команду Frontend разработчика (React). Удаленно.
+Ищу Frontend разработчика (React)
 
 Основные требования:
 * Опыт разработки на JavaScript (ES6)

@@ -1,3 +1,0 @@
-function containsCloseNums(nums, k) {
-
-}
