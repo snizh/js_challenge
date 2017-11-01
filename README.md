@@ -1,6 +1,6 @@
 # JavaScript challenge 1
 
-Ищу Frontend разработчика (React)
+Ищу Frontend разработчика (React).
 
 Основные требования:
 * Опыт разработки на JavaScript (ES6)
