@@ -1,6 +1,9 @@
 
 function houseRobber(nums) {
-
+  return Math.max(...nums
+    .reduce((acc, v1, i, arr) => (arr.length > i + 2 ?
+      [...acc, v1, ...arr.slice(i + 2).map(v2 => v1 + v2)] :
+      [...acc, v1]), []));
 }
 
 function houseRobberSpec() {
