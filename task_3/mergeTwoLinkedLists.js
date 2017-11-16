@@ -8,29 +8,36 @@ function ListNode(x) {
   this.next = null;
 }
 
-
 function mergeTwoLinkedLists(l1, l2) {
-  const pickSmallest = (bothLists) => {
-    let sm;
+  const lists = { l1, l2 };
 
-    if (!bothLists.l2 || bothLists.l1 && bothLists.l1.value <= bothLists.l2.value) {
-      sm = bothLists.l1;
-      bothLists.l1 = bothLists.l1.next;
+  const popFromList = (key) => {
+    const elem = lists[key];
+    lists[key] = lists[key].next;
+    return elem;
+  }
+
+  const pickSmallest = () => {
+    if (lists.l1 && lists.l2) {
+      if (lists.l1.value <= lists.l2.value) {
+        return popFromList('l1');
+      } else {
+        return popFromList('l2');
+      }
+    } else if (lists.l1 && !lists.l2) {
+      return popFromList('l1');
+    } else if (!lists.l1 && lists.l2) {
+      return popFromList('l2');
     } else {
-      sm = bothLists.l2;
-      bothLists.l2 = bothLists.l2.next;
-    };
-
-    return sm;
+      return null
+    }
   };
 
-  let lists = { l1, l2 };
-  const head = pickSmallest(lists);
-
+  const head = pickSmallest();
   let tail = head;
 
-  while (lists.l1 || lists.l2) {
-    tail.next = pickSmallest(lists);
+  while (tail) {
+    tail.next = pickSmallest();
     tail = tail.next;
   }
 
@@ -39,11 +46,7 @@ function mergeTwoLinkedLists(l1, l2) {
 
 function createList(arr) {
   const node = new ListNode(arr[0]);
- 
-  if (arr.length > 1) {
-    node.next = createList(arr.slice(1), node)
-  };
-  
+  if (arr.length > 1) node.next = createList(arr.slice(1), node);
   return node;
 }
 
