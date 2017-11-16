@@ -1,4 +1,8 @@
-
+/**
+ * houseRobber(nums: Array): number
+ *  возвращает максимальную возможную сумму
+ *  двух НЕ соседних элементов массива.
+ */
 function houseRobber(nums) {
   return Math.max(...nums
     .reduce((acc, v1, i, arr) => (arr.length > i + 2 ?

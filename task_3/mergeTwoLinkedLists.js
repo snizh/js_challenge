@@ -8,6 +8,13 @@ function ListNode(x) {
   this.next = null;
 }
 
+/**
+ * mergeTwoLinkedLists(l1, l2): list
+ *  Возвращает объединенный односвязный список, составленный из элементов
+ *  входных списков l1 и l2 с сохранением сортировки.
+ *  Изменяет содержимое исходных списков l1 и l2: после выполнения функции
+ *  они также ссылаются на результирующий список.
+ */
 function mergeTwoLinkedLists(l1, l2) {
   const lists = { l1, l2 };
 
@@ -51,7 +58,12 @@ function createList(arr) {
 }
 
 function mergeTwoLinkedListsSpec() {
-  console.log(JSON.stringify(mergeTwoLinkedLists(createList([1, 2, 3]), createList([4, 5, 6])), null, 4));
+  const l1 = createList([1, 2, 3]);
+  const l2 = createList([4, 5, 6]);
+  const merged = mergeTwoLinkedLists(l1, l2);
+  console.log(JSON.stringify(merged, null, 4));
+  console.log(JSON.stringify(merged, null, 4));
+  console.log(JSON.stringify(merged, null, 4));
   console.log(JSON.stringify(mergeTwoLinkedLists(createList([5,10,15,40]), createList([2,3,20])), null, 4));
 }
 
