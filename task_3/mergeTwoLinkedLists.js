@@ -58,12 +58,7 @@ function createList(arr) {
 }
 
 function mergeTwoLinkedListsSpec() {
-  const l1 = createList([1, 2, 3]);
-  const l2 = createList([4, 5, 6]);
-  const merged = mergeTwoLinkedLists(l1, l2);
-  console.log(JSON.stringify(merged, null, 4));
-  console.log(JSON.stringify(merged, null, 4));
-  console.log(JSON.stringify(merged, null, 4));
+  console.log(JSON.stringify(mergeTwoLinkedLists(createList([1, 2, 3]), createList([4, 5, 6])), null, 4));
   console.log(JSON.stringify(mergeTwoLinkedLists(createList([5,10,15,40]), createList([2,3,20])), null, 4));
 }
 
